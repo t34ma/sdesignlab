@@ -32,9 +32,9 @@ PHREEQC Version 3: A Wide Variety of Aqueous Geochemical Calculations:
 HYPRE: Scalable Linear Solvers and Multigrid Methods:
   https://computing.llnl.gov/projects/hypre-scalable-linear-solvers-multigrid-methods
 ParMETIS: Parallel Graph Partitioning and Fill-reducing Matrix Ordering:
-  http://glaros.dtc.umn.edu/gkhome/metis/parmetis/overview
+  https://github.com/KarypisLab
 MUMPS: MUltifrontal Massively Parallel sparse direct Solver:
-  http://mumps.enseeiht.fr/
+  https://mumps-solver.org/index.php
 (3)Developing tools:
 CMake: Program building platform:
   https://cmake.org/
