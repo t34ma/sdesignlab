@@ -1,0 +1,74 @@
+COM3 Ver 9.10 ** 1-MINDLIN PLATE + INTERFACE FOR MISHIMA-BUJA (uniaxial tens)
+02020300000000000001
+NODE
+NODE     1   0.0      0.0        0.0                        000
+NODE     2   5.0      0.0        0.0                        000
+NODE     3  10.0      0.0        0.0                        000
+NODE     4   0.0      0.0        5.0                        000
+NODE     5  10.0      0.0        5.0                        000
+NODE     6   0.0      0.0       10.0                        000
+NODE     7   5.0      0.0       10.0                        000 
+NODE     8  10.0      0.0       10.0                        000 
+NODE    11   0.0      0.0        0.0                        000
+NODE    12   5.0      0.0        0.0                        000
+NODE    13  10.0      0.0        0.0                        000 
+NODE    14   0.0      0.0        5.0                        000
+NODE    15  10.0      0.0        5.0                        000 
+NODE    16   0.0      0.0       10.0                        000
+NODE    17   5.0      0.0       10.0                        000
+NODE    18  10.0      0.0       10.0                        000
+NODE   101   0.0      0.0        0.0                        111
+NODE   102   5.0      0.0        0.0                        111
+NODE   103  10.0      0.0        0.0                        111
+NODE   111   0.0      0.0        0.0                        111
+NODE   112   5.0      0.0        0.0                        111
+NODE   113  10.0      0.0        0.0                        111 
+NODE   200   0.0     10.0        0.0                        111
+ELEM
+PLAT     1    1    3    8    6   11   13   18   16    2    5    7    4   12
+   15   17   14    0    0    0    0    1 2000000.0   1.0       3000.0   0.0
+     250.0      15.0       0.2    3101       101
+ 2000000.0    4000.0     0.020 2000000.0    4000.0     0.020       0.0
+FACE    11  101  103    3    1  111  113   13   11  102    0    2    0  112
+    0   12    0    0    0    0  200    5 1000000.0   1.0       2000.0   0.0
+     500.0       4.0      90.0    3101       101
+ 2000000.0    4000.0     0.05     0.5      100.0
+LOAD
+
+STEP     1  1.000      0.00             
+LOAD     6                        20.0          
+LOAD     7                        80.0                  
+LOAD     8                        20.0          
+STEP     2  2.000      0.00           
+LOAD     6                        20.0          
+LOAD     7                        80.0          
+LOAD     8                        20.0           
+STEP     3  3.000      0.00           
+LOAD     6                        20.0          
+LOAD     7                        80.0          
+LOAD     8                        20.0          
+STEP     4  4.000      0.00           
+LOAD     6                        20.0          
+LOAD     7                        80.0          
+LOAD     8                        20.0          
+END
+
+
+Note) Fc'(KSC)  Gmax(cm)  Angle(degree)
+      Es (KSC)  fy (KSC)       p         D(cm)    XL(cm)     
+Note)
+   The checking data file for Mindlin joint interface element subjected to 
+UNI-AXILAL pull-out.  The attached plate element of elasticity
+transfers axial force to the joint interface.  The force is applied uniformly
+in the in-plane direction.
+Note) 
+   This data file is to check the model of steel model and the cyclic 
+MK-Mishima's model.  The material index (=5) and data sequence is a little 
+changed from standard model.         
+
+Note) 
+    This universal model represents pull-out from both sides of concrete.
+Then, when you consider single sided pull-out like standard model, please
+define a half of the real diameter as an equivalent one.
+    This sample specifies 0.5(cm) as the bar size.  This is equivalent to 
+1.0(cm) in the standard constitutive model.

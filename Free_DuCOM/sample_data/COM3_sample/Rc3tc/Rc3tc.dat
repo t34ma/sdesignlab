@@ -1,0 +1,161 @@
+  1-SOLID RC SMEARED ELEMENT / LOAD IS APPLIED  Ver.9.10 in TENSION + COMP.
+02020
+NODE
+NODE     1   0.0      0.0        0.0                        111
+NODE     2  10.0      0.0        0.0                        011
+NODE     3  10.0     10.0        0.0                        001
+NODE     4   0.0     10.0        0.0                        101
+NODE     5   0.0      0.0       10.0                        100
+NODE     6  10.0      0.0       10.0                        000
+NODE     7  10.0     10.0       10.0                        000
+NODE     8   0.0     10.0       10.0                        100
+ELEM
+ELEM     1    5    6    7    8    1    2    3    4    0    0    0    0    0
+    0    0    0    0    0    0    0    9  220000.0    0.2      300.0   0.00
+       1.0       0.0       0.0 2100000.0    8000.0    0.0000       0.0       0.0       0.0
+       0.0       1.0       0.0 2100000.0    8000.0    0.0005      26.0       0.0       0.0
+       0.0       0.0       1.0 2100000.0    8000.0    0.0200       0.0       0.0       0.0
+LOAD
+
+STEP     1   1.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     2   2.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     3   3.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     4   4.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     5   5.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     6   6.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     7   7.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     8   8.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP     9   9.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP    10  10.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP    11  11.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP    12  12.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP    13  13.00 
+LOAD     2 -500.0
+LOAD     3 -500.0
+LOAD     5    0.0     0.0        250.0
+LOAD     6 -500.0     0.0        250.0 
+LOAD     7 -500.0     0.0        250.0
+LOAD     8    0.0     0.0        250.0 
+STEP    14  14.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+STEP    15  15.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+STEP    16  16.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+STEP    17  17.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+STEP    18  18.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+STEP    19  19.00 
+LOAD     2 -250.0
+LOAD     3 -250.0
+LOAD     5    0.0     0.0        125.0
+LOAD     6 -250.0     0.0        125.0 
+LOAD     7 -250.0     0.0        125.0
+LOAD     8    0.0     0.0        125.0 
+END
+
+Note)  Bi-axial tension compression to RC 3D solid smeared crack element: 
+       Steel reinforcement is also assumed as smeared net of bars.
+       The steel data of ELEM can be up to 3.  The last data is used
+       for initial value setting of crack index, tensile strength of
+       concrete and free parameters.  These input values are related
+       to cracking & its treatment.
+        

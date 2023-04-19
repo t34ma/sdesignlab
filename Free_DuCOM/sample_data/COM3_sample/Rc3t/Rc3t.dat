@@ -1,0 +1,58 @@
+  1-SOLID RC SMEARED ELEMENT / LOAD IS APPLIED  Ver.9.10  in TENSION
+020100000
+NODE
+NODE     1   0.0      0.0        0.0                        111
+NODE     2  10.0      0.0        0.0                        011
+NODE     3  10.0     10.0        0.0                        001
+NODE     4   0.0     10.0        0.0                        101
+NODE     5   0.0      0.0       10.0                        000
+NODE     6  10.0      0.0       10.0                        000
+NODE     7  10.0     10.0       10.0                        000
+NODE     8   0.0     10.0       10.0                        000
+ELEM
+ELEM     1    5    6    7    8    1    2    3    4    0    0    0    0    0
+    0    0    0    0    0    0    0    9  220000.0    0.2      300.0   0.00
+       1.0       0.0       0.0 2100000.0    8000.0     0.020       0.0       0.0       0.0
+       0.0       1.0       0.0 2100000.0    8000.0     0.020      26.0       0.0       0.0
+       0.0       0.0       1.0 2100000.0    8000.0     0.020       0.0       0.0       0.0
+LOAD
+
+STEP     1   1.00 
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+STEP     2   2.00
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+STEP     3   3.00
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+STEP     4   4.00
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+STEP     5   5.00
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+STEP     6   6.00
+LOAD     5   0.0      0.0        250.0
+LOAD     6   0.0      0.0        250.0 
+LOAD     7   0.0      0.0        250.0
+LOAD     8   0.0      0.0        250.0 
+END
+
+Note)  Uni-axial tension to RC 3D solid smeared crack element: 
+       Steel reinforcement is also assumed as smeared net of bars.
+       The steel data of ELEM can be up to 3.  The last data is used
+       for initial value setting of crack index, tensile strength of
+       concrete and free parameters.  These input values are related
+       to cracking & its treatment.
+        
