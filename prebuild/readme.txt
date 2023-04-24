@@ -16,7 +16,15 @@ Visual Studio 2019 + Intel oneAPI:
 1.2.8-2022/10: hypre-2.26.0, iphreeqc-3.7.3-15968, parmetis-4.0.3, scotch-v6.1.3, MUMPS_5.5.1
 
 
-3.Related links
+3. Redistributable libaries
+(1)Runtime Versions for Intel oneAPI Compilers
+Download Intel Fortran Compiler Runtime for Windows 2021.4.0:
+  https://www.intel.com/content/www/us/en/developer/articles/tool/compilers-redistributable-libraries-by-version.html
+(2)Microsoft Visual C++ Redistributable latest supported downloads
+Download Visual Studio 2015, 2017, 2019, and 2022 -x64:
+  https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170
+
+4.Related links
 (1)Compilers and runtime libraries:
 The installation kit of Microsoft Visual Studio community 2019:
   https://visualstudio.microsoft.com/ja/downloads/
