@@ -15,7 +15,11 @@ depressed speed version - equivalent to the sequential
 gaussian elimination method.
 2) The enhanced strain model is removed, which may estimate
 higer shear capacity of RC members than reality due to
-shear lock.
+shear lock. Please use second-order isoparametric elements.
+
+(Technical note)
+The size of element should be greater than 2 times of maximum
+coarse aggregate size of concrete to get proper shear capacity.
 
 (no warranty)
 We disclaim any warranty for any damage caused by using
