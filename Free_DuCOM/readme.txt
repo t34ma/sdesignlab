@@ -1,6 +1,7 @@
 (note)
 To prevent virus infection, the SolverMT.zip is locked.
-Please contact info@sdesignlab.co.jp to get password.
+Please contact info@sdesignlab.co.jp and let us know your
+affiliation and purpose. Then you will get password.
 
 (how to run)
 Save SolverMT.exe and SolverMT_.dll to the same directory.
