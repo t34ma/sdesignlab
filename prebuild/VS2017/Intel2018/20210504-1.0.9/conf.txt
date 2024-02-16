@@ -1,0 +1,4 @@
+set HYPRE=hypre-2.20.0
+set IPHREEQC=iphreeqc-3.7.0-15749
+set PARMETIS=parmetis-4.0.3
+set MUMPS=MUMPS_5.4.0

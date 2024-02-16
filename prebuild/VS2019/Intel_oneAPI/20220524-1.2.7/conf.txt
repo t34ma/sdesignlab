@@ -1,0 +1,5 @@
+set HYPRE=hypre-2.24.0
+set IPHREEQC=iphreeqc-3.7.3-15968
+set PARMETIS=parmetis-4.0.3
+set SCOTCH=scotch-v.6.1.3
+set MUMPS=MUMPS_5.5.0
