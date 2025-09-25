@@ -1,0 +1,105 @@
+#
+#  This file is part of MUMPS 5.3.1, released
+#  on Fri Apr 10 13:52:30 UTC 2020
+#
+#Begin orderings
+
+# NOTE that PORD is distributed within MUMPS by default. It is recommended to
+# install other orderings. For that, you need to obtain the corresponding package
+# and modify the variables below accordingly.
+# For example, to have Metis available within MUMPS:
+#          1/ download Metis and compile it
+#          2/ uncomment (suppress # in first column) lines
+#             starting with LMETISDIR,  LMETIS
+#          3/ add -Dmetis in line ORDERINGSF
+#             ORDERINGSF  = -Dpord -Dmetis
+#          4/ Compile and install MUMPS
+#             make clean; make   (to clean up previous installation)
+#
+#          Metis/ParMetis and SCOTCH/PT-SCOTCH (ver 6.0 and later) orderings are recommended.
+#
+
+SCOTCHDIR  = ${HOME}/lib/scotch-intelmpi
+ISCOTCH    = -I$(SCOTCHDIR)/include
+#
+# You have to choose one among the following two lines depending on
+# the type of analysis you want to perform. If you want to perform only
+# sequential analysis choose the first (remember to add -Dscotch in the ORDERINGSF
+# variable below); for both parallel and sequential analysis choose the second 
+# line (remember to add -Dptscotch in the ORDERINGSF variable below)
+
+#LSCOTCH    = -L$(SCOTCHDIR)/lib -lesmumps -lscotch -lscotcherr
+LSCOTCH    = -L$(SCOTCHDIR)/lib -lptesmumps -lptscotch -lptscotcherr -lscotch
+
+
+LPORDDIR = $(topdir)/PORD/lib/
+IPORD    = -I$(topdir)/PORD/include/
+LPORD    = -L$(LPORDDIR) -lpord
+
+LMETISDIR = /home/sdlab/lib/parmetis-intelmpi
+IMETIS    = -I$(LMETISDIR)/include
+
+# You have to choose one among the following two lines depending on
+# the type of analysis you want to perform. If you want to perform only
+# sequential analysis choose the first (remember to add -Dmetis in the ORDERINGSF
+# variable below); for both parallel and sequential analysis choose the second 
+# line (remember to add -Dparmetis in the ORDERINGSF variable below)
+
+#LMETIS    = -L$(LMETISDIR) -lmetis
+LMETIS    = -L$(LMETISDIR)/lib -lparmetis -lmetis
+
+# The following variables will be used in the compilation process.
+# Please note that -Dptscotch and -Dparmetis imply -Dscotch and -Dmetis respectively.
+# If you want to use Metis 4.X or an older version, you should use -Dmetis4 instead of -Dmetis
+# or in addition with -Dparmetis (if you are using parmetis 3.X or older).
+ORDERINGSF = -Dscotch -Dmetis -Dpord -Dptscotch -Dparmetis
+#ORDERINGSF  = -Dpord
+ORDERINGSC  = $(ORDERINGSF)
+
+LORDERINGS = $(LMETIS) $(LPORD) $(LSCOTCH)
+IORDERINGSF = $(ISCOTCH)
+IORDERINGSC = $(IMETIS) $(IPORD) $(ISCOTCH)
+
+#End orderings
+########################################################################
+################################################################################
+
+PLAT    =
+LIBEXT  = .a
+OUTC    = -o 
+OUTF    = -o 
+RM = /bin/rm -f
+CC = mpiicc
+FC = mpiifort
+FL = mpiifort
+AR = ar vr 
+#RANLIB = ranlib
+RANLIB  = echo
+# Make this variable point to the path where the Intel MKL library is
+# installed. It is set to the default install directory for Intel MKL.
+#MKLROOT=/opt/intel/mkl/lib/intel64
+MKLROOT=/opt/intel/oneapi/mkl/2023.1.0/lib/intel64
+LAPACK = -L$(MKLROOT) -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core
+SCALAP = -L$(MKLROOT) -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
+
+LIBPAR = $(SCALAP) $(LAPACK)
+
+INCSEQ = -I$(topdir)/libseq
+LIBSEQ  = $(LAPACK) -L$(topdir)/libseq -lmpiseq
+
+LIBBLAS = -L$(MKLROOT) -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core 
+LIBOTHERS = -lpthread
+
+#Preprocessor defs for calling Fortran from C (-DAdd_ or -DAdd__ or -DUPPER)
+CDEFS   = -DAdd_
+
+#Begin Optimized options
+OPTF    = -O -nofor-main -DBLR_MT -qopenmp -DGEMMT_AVAILABLE -fPIC
+OPTL    = -O -nofor-main -qopenmp
+OPTC    = -O -qopenmp -fPIC
+#End Optimized options
+ 
+INCS = $(INCPAR)
+LIBS = $(LIBPAR)
+LIBSEQNEEDED =
+
