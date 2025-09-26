@@ -36,7 +36,7 @@ LPORDDIR = $(topdir)/PORD/lib/
 IPORD    = -I$(topdir)/PORD/include/
 LPORD    = -L$(LPORDDIR) -lpord
 
-LMETISDIR = /home/sdlab/lib/parmetis-intelmpi
+LMETISDIR = ${HOME}/lib/parmetis-intelmpi
 IMETIS    = -I$(LMETISDIR)/include
 
 # You have to choose one among the following two lines depending on
@@ -66,6 +66,12 @@ IORDERINGSC = $(IMETIS) $(IPORD) $(ISCOTCH)
 
 PLAT    =
 LIBEXT  = .a
+LIBEXT_SHARED  = .so
+SONAME = -soname
+FPIC_OPT = -fPIC
+# Adapt/uncomment RPATH_OPT to avoid modifying
+# LD_LIBRARY_PATH in case of shared libraries
+# RPATH_OPT = -Wl,-rpath,/path/to/MUMPS_x.y.z/lib/
 OUTC    = -o 
 OUTF    = -o 
 RM = /bin/rm -f
@@ -77,17 +83,15 @@ AR = ar vr
 RANLIB  = echo
 # Make this variable point to the path where the Intel MKL library is
 # installed. It is set to the default install directory for Intel MKL.
-#MKLROOT=/opt/intel/mkl/lib/intel64
-MKLROOT=/opt/intel/oneapi/mkl/2023.1.0/lib/intel64
-LAPACK = -L$(MKLROOT) -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core
-SCALAP = -L$(MKLROOT) -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
+LAPACK = -L$(MKLROOT)/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core
+SCALAP = -L$(MKLROOT)/lib/intel64 -lmkl_scalapack_lp64 -lmkl_blacs_intelmpi_lp64
 
 LIBPAR = $(SCALAP) $(LAPACK)
 
 INCSEQ = -I$(topdir)/libseq
 LIBSEQ  = $(LAPACK) -L$(topdir)/libseq -lmpiseq
 
-LIBBLAS = -L$(MKLROOT) -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core 
+LIBBLAS = -L$(MKLROOT)/lib/intel64 -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core 
 LIBOTHERS = -lpthread
 
 #Preprocessor defs for calling Fortran from C (-DAdd_ or -DAdd__ or -DUPPER)
