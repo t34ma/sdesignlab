@@ -24,4 +24,4 @@ you can use the DLL included in this zip archive as a workaround.
 
 License notice:
 This DLL is redistributed in accordance with Intel's license terms.
-For more information, please refer to IntelÅfs official documentation.
+For more information, please refer to Intel's official documentation.
