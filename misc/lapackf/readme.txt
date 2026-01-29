@@ -19,5 +19,4 @@ variable SEQ_ELEM_ACCESS=T. However, note that in this mode the element-wise
 loops are not parallelized, which may cause a slight reduction in performance.
 
 Since MKL and OpenBLAS support calls from OpenMP parallel regions, this setting
-is unnecessary when using them. Note that the two compile switches described
-here cannot be used together with -Dbuild_i2 for 2-BYTE integer builds.
+is unnecessary when using them.
