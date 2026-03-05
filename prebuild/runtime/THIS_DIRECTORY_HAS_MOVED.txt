@@ -1,0 +1,2 @@
+This directory has been moved to: misc/runtime
+All files previously located here are now in the new location.
