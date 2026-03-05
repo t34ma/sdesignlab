@@ -28,7 +28,7 @@ This means that an old or incompatible version of libiomp5md.dll is installed. O
 Version Requirement
 To run DuCOM-COM3, libiomp5md.dll version 5.0.2021.125 or newer is required.
 For best compatibility, version 5.0.2023.118 or newer is recommended.
-For installation of the Intel OpenMP Runtime, please refer to prebuild/runtime.
+For installation of the Intel OpenMP Runtime, please refer to misc/runtime.
 
 Notes
 - This tool does not modify your system.
